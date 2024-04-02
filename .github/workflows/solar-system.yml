@@ -39,6 +39,7 @@ jobs:
             path: test-results.xml
 
     code-coverage:
+      name: Code Coverage
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
@@ -53,7 +54,7 @@ jobs:
           run: npm install
 
         - name: Run Code Coverage
-          run: npm run code-coverage
+          run: npm run coverage
           continue-on-error: true
 
         - name: Upload Code Coverage
